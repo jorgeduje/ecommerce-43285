@@ -10,7 +10,7 @@ function App() {
 
   return <div>
     <Navbar />
-    <h1 style={{color: "steelblue"}}>Hola como estas?</h1>
+    <h1 style={{color: "red"}}>Hola como estas?</h1>
     <button onClick={funcionSaludar} >Saludar</button>
     <Footer/>
   </div>;
