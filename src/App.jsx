@@ -1,11 +1,9 @@
-import ProbandoComponents from "./components/page/probandoMui/ProbandoComponents";
-import ProbandoMui from "./components/page/probandoMui/ProbandoMui";
+import ItemList from "./components/page/itemList/ItemList";
 
 function App() {
   return (
     <div>
-      {/* <ProbandoMui /> */}
-      <ProbandoComponents />
+      <ItemList />
     </div>
   );
 }
