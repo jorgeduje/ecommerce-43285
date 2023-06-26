@@ -1,11 +1,11 @@
-import ItemList from "./components/page/itemList/ItemList";
 import Navbar from "./components/layout/navbar/Navbar";
+import ItemListContainer from "./components/page/itemList/ItemListContainer";
 
 function App() {
   return (
     <div>
       <Navbar>
-        <ItemList />
+        <ItemListContainer />
       </Navbar>
     </div>
   );
