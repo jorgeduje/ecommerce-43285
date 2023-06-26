@@ -5,12 +5,12 @@ const Navbar = ({ children }) => {
     <div>
       <div>
         <div className={"containerNavbar"}>
-          <h4>Comision 39650</h4>
+          <h4>Comision 43285</h4>
 
           <ul className="categories">
             <li>Todas</li>
-            <li>deportivas</li>
-            <li>urbanas</li>
+            <li>Deportivas</li>
+            <li>Urbanas</li>
           </ul>
 
           <CartWidget />
