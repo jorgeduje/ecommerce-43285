@@ -1,4 +1,4 @@
-import React from 'react'
+
 import CounterContainer from '../../common/counter/CounterContainer'
 
 const ItemDetail = () => {

@@ -15,9 +15,8 @@ const ItemListContainer = () => {
     tarea
       .then((respuesta) => setItems(respuesta))
       .catch((error) => setError(error));
-  }, []);
 
- 
+  }, []);
 
   return <ItemList items={items} />;
 };
