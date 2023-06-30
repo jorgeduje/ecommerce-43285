@@ -1,4 +1,5 @@
 import Navbar from "./components/layout/navbar/Navbar";
+import FetchingDB from "./components/page/FetchingDB/FetchingDB";
 import FetchingData from "./components/page/fetchingData/FetchingData";
 import ItemListContainer from "./components/page/itemList/ItemListContainer";
 
@@ -7,7 +8,8 @@ function App() {
     <div>
       <Navbar>
         {/* <ItemListContainer /> */}
-        <FetchingData />
+        {/* <FetchingData /> */}
+        <FetchingDB />
       </Navbar>
     </div>
   );
