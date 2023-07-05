@@ -1,22 +1,24 @@
+import { Link } from "react-router-dom";
+
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
-const Navbar = ({ children }) => {
+const Navbar = () => {
   return (
     <div>
       <div>
         <div className={"containerNavbar"}>
-          <h4>Comision 43285</h4>
+          <Link to="/">
+            <h4>Comision 43285</h4>
+          </Link>
 
           <ul className="categories">
-            <li>Todas</li>
-            <li>Deportivas</li>
-            <li>Urbanas</li>
+            <Link to="/">Todas</Link>
+            <Link to="/category/deportivas">Deportivas</Link>
+            <Link to="/category/urbanas">Urbanas</Link>
           </ul>
 
           <CartWidget />
         </div>
-
-        {children}
       </div>
     </div>
   );
