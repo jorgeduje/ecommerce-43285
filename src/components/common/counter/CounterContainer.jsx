@@ -12,7 +12,14 @@ const CounterContainer = ({ stock, onAdd }) => {
     contador > 1 && setContador(contador - 1);
   };
 
-  return <Counter contador={contador} sumar={sumar} restar={restar} onAdd={onAdd} />;
+  let dataProps = {
+    contador,
+    sumar,
+    restar,
+    onAdd,
+  };
+
+  return <Counter {...dataProps} />;
 };
 
 export default CounterContainer;
