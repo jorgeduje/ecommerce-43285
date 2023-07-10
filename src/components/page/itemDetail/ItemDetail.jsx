@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
 import CounterContainer from "../../common/counter/CounterContainer";
 import { products } from "../../../productsMock";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 
 
 const ItemDetail = () => {
   const [producto, setProducto] = useState({});
 
   const {id} = useParams()
+   const navigate = useNavigate()
+
 
 
   useEffect(() => {
@@ -22,7 +24,9 @@ const ItemDetail = () => {
   const onAdd = (cantidad) => {
     console.log(producto);
     console.log(cantidad);
+    navigate("/cart")
   };
+
 
   return (
     <div>
