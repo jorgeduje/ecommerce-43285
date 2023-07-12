@@ -21,7 +21,7 @@ export let products = [
         id: 3,
         title: "Puma",
         price: 19000,
-        stock: 0,
+        stock: 2,
         description: "Las clasicas zapatillas que van para cualquier momento del dia",
         category: "urbanas",
         img: "https://res.cloudinary.com/dnqfh2chg/image/upload/v1669430165/images_lujpmr.jpg"
