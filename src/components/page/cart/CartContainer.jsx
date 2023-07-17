@@ -1,8 +1,29 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
+import Swal from "sweetalert2";
 
 const CartContainer = () => {
-  const { cart, clearCart, deleteById } = useContext(CartContext);
+  const { cart, clearCart, deleteById, getTotalPrice } = useContext(CartContext);
+
+  let total = getTotalPrice()
+
+  const limpiar = ()=>{
+    Swal.fire({
+      title: 'Seguro quieres limpiar el carrito?',
+      showDenyButton: true,
+      confirmButtonText: 'Si, eliminar!',
+      denyButtonText: `No, no eliminar`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        clearCart()
+        Swal.fire('Carrito limpiado exitosamente', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('El carrito queda como estaba', '', 'info')
+      }
+    })
+    
+  }
 
   return (
     <div>
@@ -10,16 +31,21 @@ const CartContainer = () => {
 
       {cart.map((elemento) => {
         return (
-          <div key={elemento.id} style={{border: "2px solid black"}}>
+          <div key={elemento.id} style={{ border: "2px solid black" }}>
             <h4>{elemento.title}</h4>
             <h5>{elemento.price}</h5>
             <h5>{elemento.quantity}</h5>
-            <button onClick={()=>deleteById(elemento.id)}>eliminar</button>
+            <button onClick={() => deleteById(elemento.id)}>eliminar</button>
           </div>
         );
       })}
 
-      <button onClick={clearCart}>Limpiar carrito</button>
+   
+   {
+    cart.length > 0  && <button onClick={limpiar}>Limpiar carrito</button>
+   }
+
+  <h2>El total es: {total}</h2>
     </div>
   );
 };
