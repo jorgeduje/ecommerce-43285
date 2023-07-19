@@ -58,7 +58,7 @@ const CartContextComponent = ({ children }) => {
 
   const getQuantityById = (id)=>{
 
-    const product = cart.find( (elemento)=> elemento.id === +id)
+    const product = cart.find( (elemento)=> elemento.id === id)
     return product?.quantity
 
   }
