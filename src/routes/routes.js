@@ -40,10 +40,5 @@ export const routes = [
     id: "formik",
     path: "/formik",
     Element: FormularioFormik,
-  },
-  {
-    id: "dashboard",
-    path: "/dashboard",
-    Element: Dashboard,
-  },
+  }
 ];
