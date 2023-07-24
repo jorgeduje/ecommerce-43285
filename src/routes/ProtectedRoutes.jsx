@@ -1,7 +1,7 @@
 import { Outlet, Navigate } from "react-router";
 
 const ProtectedRoutes = () => {
-  let userRol = "user";
+  let userRol = "admin";
 
   return <div>{userRol !== "admin" ? <Navigate to={"/"} /> : <Outlet />}</div>;
 };

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
 const Navbar = () => {
-  let userRol = "user";
+  let userRol = "admin";
 
   return (
     <div>
