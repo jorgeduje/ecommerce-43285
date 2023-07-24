@@ -1,29 +1,30 @@
 import { useContext } from "react";
 import { CartContext } from "../../../context/CartContext";
 import Swal from "sweetalert2";
+import { Link } from "react-router-dom";
 
 const CartContainer = () => {
-  const { cart, clearCart, deleteById, getTotalPrice } = useContext(CartContext);
+  const { cart, clearCart, deleteById, getTotalPrice } =
+    useContext(CartContext);
 
-  let total = getTotalPrice()
+  let total = getTotalPrice();
 
-  const limpiar = ()=>{
+  const limpiar = () => {
     Swal.fire({
-      title: 'Seguro quieres limpiar el carrito?',
+      title: "Seguro quieres limpiar el carrito?",
       showDenyButton: true,
-      confirmButtonText: 'Si, eliminar!',
+      confirmButtonText: "Si, eliminar!",
       denyButtonText: `No, no eliminar`,
     }).then((result) => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
-        clearCart()
-        Swal.fire('Carrito limpiado exitosamente', '', 'success')
+        clearCart();
+        Swal.fire("Carrito limpiado exitosamente", "", "success");
       } else if (result.isDenied) {
-        Swal.fire('El carrito queda como estaba', '', 'info')
+        Swal.fire("El carrito queda como estaba", "", "info");
       }
-    })
-    
-  }
+    });
+  };
 
   return (
     <div>
@@ -40,12 +41,10 @@ const CartContainer = () => {
         );
       })}
 
-   
-   {
-    cart.length > 0  && <button onClick={limpiar}>Limpiar carrito</button>
-   }
+      {cart.length > 0 && <button onClick={limpiar}>Limpiar carrito</button>}
 
-  <h2>El total es: {total}</h2>
+      <h2>El total es: {total}</h2>
+      <Link to="/checkout" >Finalizar compra</Link>
     </div>
   );
 };
