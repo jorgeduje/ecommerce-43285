@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import CartWidget from "../../common/cartWidget/CartWidget";
 import "./Navbar.css";
 const Navbar = () => {
+  let userRol = "user";
+
   return (
     <div>
       <div>
@@ -16,6 +18,8 @@ const Navbar = () => {
             <Link to="/category/deportivas">Deportivas</Link>
             <Link to="/category/urbanas">Urbanas</Link>
           </ul>
+
+          {userRol === "admin" && <Link to="dashboard">ADMIN</Link>}
 
           <CartWidget />
         </div>
