@@ -7,6 +7,8 @@ import "react-toastify/dist/ReactToastify.css";
 import { db } from "../../../firebaseConfig";
 import { getDoc, collection, doc } from "firebase/firestore";
 
+
+
 const ItemDetail = () => {
   const { addToCart, getQuantityById } = useContext(CartContext);
 
