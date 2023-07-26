@@ -14,7 +14,7 @@ git clone pepepeerez.com
 
 ![](/public/vite.svg)
 
-[link-a-app](www.google.com)
+[link-a-app](https://www.google.com.ar/)
 
 ```javascript
 import {a} from "react"
